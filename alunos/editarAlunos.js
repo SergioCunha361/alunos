@@ -1,13 +1,27 @@
-const { alunos } = require("./")
+const { alunos } = require("./alunos")
 
 
 function editarAluno(matricula, novoNome, novoEmail, novoTelefone){
+    const aluno  = alunos.find(elementodoArray =>
+        elementodoArray.matricula === matricula)  
+    
     try {
-        const aluno  = alunos.find(elementodoArray =>
-            elementodoArray.matricula === matricula             //!! aluno.nome === nome se for um ou outro
-        )
+        console.log("ok")
+           
         
-        if (aluno){          // se existir aluno a variavel aluno está  true se nao existir indefinido false
+        console.log(aluno)            
+        if (aluno !== ""){ 
+            if (!validar.isEmail(novoEmail)){
+                console.error(`O e-mail informado de ${novoNome} é inválido!`)
+                return
+            }
+            if (
+                validar.isEmpty(novoNome) ||
+                validar.isEmpty(novoTelefone)
+            ){
+                console.error("Todos os campos devem ser preenchidos!")
+                return
+            }         // se existir aluno a variavel aluno está  true se nao existir indefinido false
             aluno.nome     = novoNome
             aluno.email    = novoEmail
             aluno.telefone = novoTelefone
@@ -21,6 +35,5 @@ function editarAluno(matricula, novoNome, novoEmail, novoTelefone){
     }
 
 }
-
 
 module.exports = { editarAluno };

@@ -1,7 +1,7 @@
-const { criarAluno } = require("./alunos/criarAlunos")
-const { editarAluno } = require("./alunos/editarAlunos")
-const { excluirAluno } = require("./alunos/excluirAlunos")
-const { listarAluno } = require("./alunos/listarAlunos")
+const { criarAluno }   =  require("./alunos/criarAlunos")
+const { editarAluno }  =  require("./alunos/editarAlunos")
+const { excluirAluno } =  require("./alunos/excluirAlunos")
+const { listarAluno }  =  require("./alunos/listarAlunos")
 
 
 
@@ -78,14 +78,47 @@ const { listarAluno } = require("./alunos/listarAlunos")
 
 // }
     
+//EXEMPLO PARA MY COMPYLE
+// let clientes = [
+//     { idede: 59,
+//       nome: "sergio",
+//       tel: 981518033},
+//     { idede: 57,
+//       nome: "ederlinda",
+//       tel: 999837527},
+//     { idede: 18,
+//       nome: "gabriel",
+//       tel: 999881111}    
+// ]
 
-criarAluno("1012", "Sergio Cunha", "segiocunha@gmail.com", 981518033)
-criarAluno("1015", "Gabriel Dias", "gabrieldias@gmail.com", 98885511)
+//let clientes = 
+//   { 59, "sergio", 981518033}
+//    { 57, "ederlinda", 999837527},
+//    { idade: 18, nome: "abriel", tel: 999881111}    
+
+
+
+// let resultado = clientes.find(cliente => cliente.nome === "sergio")
+// console.log(resultado)
+// if (resultado) {
+//     console.log("ok")
+// } else {
+//     console.log("não oK")
+//}
+
+
+criarAluno("1012", "Sergio Cunha", "segiocunha@gmail.com", "981518033")
+criarAluno("1015", "Gabriel Dias", "gabrieldias@gmail.com", "98885511")
+criarAluno("1021", "Joao", "joao@gmail.com", "999998888")
+//listarAluno()
+
+editarAluno("1015", "Gabriel", "gabrieldias@gmail.com", "98885511")
+
+
+//("1530", "Arilda", "arildacunha@gmail.com", "32222209")
 
 listarAluno()
 
-editarAluno("1015", "Gabriel", "gabrieldias@gmail.com", 98885511)
-listarAluno()
+// excluirAluno("1015")
+// listarAluno()
 
-excluirAluno("1015")
-listarAluno()

@@ -1,4 +1,4 @@
-const { alunos } = require("../alunos/")
+const { alunos } = require("./alunos")
 
 function excluirAluno(matricula, novoNome, novoEmail, novoTelefone){
     try {
